@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-black text-white font-inter overflow-x-hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-cinzel;
+  }
+}
+
+@layer utilities {
+  .text-shadow-fire {
+    text-shadow: 0 0 10px #FF6B35, 0 0 20px #FF8C42;
+  }
+
+  .text-shadow-water {
+    text-shadow: 0 0 10px #0077B6, 0 0 20px #00B4D8;
+  }
+
+  .text-shadow-thunder {
+    text-shadow: 0 0 10px #FFD60A, 0 0 20px #FFB700;
+  }
+}
