@@ -35,8 +35,8 @@ function App() {
             <FloatingNavbar />
             <div id="hero"><Hero /></div>
             <div id="social"><SocialTitans /></div>
-            <div id="projects"><ProjectsShowcase /></div>
             <div id="skills"><SkillsHashira /></div>
+            <div id="projects"><ProjectsShowcase /></div>
             <div id="events"><EventsBlog /></div>
             <div id="experience"><ExperienceDeathNote /></div>
             <div id="contact"><Contact /></div>
