@@ -8,13 +8,33 @@ const Contact = () => {
     const [formState, setFormState] = useState({ name: '', email: '', message: '' });
     const [status, setStatus] = useState('idle'); // idle, submitting, success, error
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('submitting');
-        setTimeout(() => {
-            setStatus('success');
-            setFormState({ name: '', email: '', message: '' });
-        }, 2000);
+
+        const formData = new FormData(e.target);
+        formData.append("access_key", "d5415784-1eb4-42f2-862f-8cb7afbda24d");
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setStatus('success');
+                setFormState({ name: '', email: '', message: '' });
+                // Optional: clear success message after some time
+                setTimeout(() => setStatus('idle'), 5000);
+            } else {
+                setStatus('error');
+            }
+        } catch (error) {
+            console.error("Error submitting form", error);
+            setStatus('error');
+        }
     };
 
     return (
@@ -70,6 +90,7 @@ const Contact = () => {
                             </label>
                             <input
                                 type="text"
+                                name="name"
                                 required
                                 value={formState.name}
                                 onChange={(e) => setFormState({ ...formState, name: e.target.value })}
@@ -84,6 +105,7 @@ const Contact = () => {
                             </label>
                             <input
                                 type="email"
+                                name="email"
                                 required
                                 value={formState.email}
                                 onChange={(e) => setFormState({ ...formState, email: e.target.value })}
@@ -97,6 +119,7 @@ const Contact = () => {
                                 <MessageSquare size={14} className="text-thunder" /> Message
                             </label>
                             <textarea
+                                name="message"
                                 rows={4}
                                 required
                                 value={formState.message}
@@ -125,6 +148,15 @@ const Contact = () => {
                                 className="text-center text-green-400 font-bold font-marker text-xl mt-4"
                             >
                                 MESSAGE DELIVERED! ARIGATO!
+                            </motion.div>
+                        )}
+                        {status === 'error' && (
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="text-center text-red-500 font-bold font-marker text-xl mt-4"
+                            >
+                                SOMETHING WENT WRONG. TRY AGAIN!
                             </motion.div>
                         )}
                     </form>

@@ -17,7 +17,19 @@ function App() {
   useEffect(() => {
     // Simulate initial loading for resources
     const timer = setTimeout(() => setLoading(false), 4500);
-    return () => clearTimeout(timer);
+
+    // Prank: Replace copied text
+    const handleCopy = (e) => {
+      e.preventDefault();
+      e.clipboardData.setData('text/plain', "Lol, What did you get by copying? 😂😂");
+    };
+
+    document.addEventListener('copy', handleCopy);
+
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener('copy', handleCopy);
+    };
   }, []);
 
   return (

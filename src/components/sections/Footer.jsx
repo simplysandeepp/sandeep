@@ -1,5 +1,7 @@
 import React from 'react';
 import { Github, Linkedin, Twitter, Instagram, Mail, ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import tanjiroDancing from '../../assets/images/tanjiro_dancing.png';
 
 const Footer = () => {
     return (
@@ -37,8 +39,13 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-bold font-cinzel text-gray-200 mb-6 border-b border-gray-800 pb-2 inline-block">CONTACT</h3>
                         <ul className="space-y-3 text-gray-400 text-sm font-inter">
-                            <li className="flex items-center gap-2"><Mail size={16} className="text-flame" /> contact@sandeep.dev</li>
-                            <li className="flex items-center gap-2">Noida, Uttar Pradesh, India</li>
+                            <li className="flex items-center gap-2">
+                                <Linkedin size={16} className="text-flame" />
+                                <a href="https://www.linkedin.com/in/sandeep-prajapati-ba04451b3/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                                    Connect on LinkedIn
+                                </a>
+                            </li>
+                            <li className="flex items-center gap-2">New Delhi, India</li>
                             <li className="pt-4">
                                 <span className="block text-xs text-gray-600 uppercase tracking-widest mb-1">Status</span>
                                 <span className="text-green-500 font-bold flex items-center gap-2"><span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" /> Open for Work</span>
@@ -46,16 +53,33 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Newsletter */}
-                    <div>
-                        <h3 className="text-lg font-bold font-cinzel text-gray-200 mb-6 border-b border-gray-800 pb-2 inline-block">NEWSLETTER</h3>
-                        <p className="text-gray-500 text-sm mb-4">Join 1,000+ developers receiving monthly tech updates.</p>
-                        <form className="flex flex-col gap-3">
-                            <input type="email" placeholder="Enter your email" className="bg-gray-900 border border-gray-800 text-white px-4 py-2 rounded focus:outline-none focus:border-flame transition-colors text-sm" />
-                            <button className="bg-white text-black font-bold py-2 rounded hover:bg-flame hover:text-white transition-colors text-sm uppercase tracking-wider">
-                                Subscribe
-                            </button>
-                        </form>
+                    {/* Anime & Thanks */}
+                    <div className="flex flex-col items-center justify-center text-center">
+                        <motion.div
+                            animate={{
+                                y: [0, -15, 0],
+                                rotate: [0, 5, -5, 0],
+                                scale: [1, 1.1, 1]
+                            }}
+                            transition={{
+                                duration: 1.5,
+                                repeat: Infinity,
+                                ease: "easeInOut"
+                            }}
+                            className="mb-4"
+                        >
+                            <img
+                                src={tanjiroDancing}
+                                alt="Dancing Tanjiro"
+                                className="w-32 h-32 object-contain filter drop-shadow-[0_0_10px_rgba(255,107,53,0.5)]"
+                            />
+                        </motion.div>
+                        <h3 className="text-xl font-bold font-cinzel text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 mb-2">
+                            ARIGATO!
+                        </h3>
+                        <p className="text-gray-400 font-inter text-sm max-w-xs">
+                            Thank you for visiting my website!
+                        </p>
                     </div>
                 </div>
 

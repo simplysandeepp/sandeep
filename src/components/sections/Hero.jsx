@@ -37,6 +37,49 @@ const BreathingText = ({ text, delay = 0 }) => {
     );
 };
 
+const TypewriterEffect = ({ phrases }) => {
+    const [index, setIndex] = useState(0);
+    const [subIndex, setSubIndex] = useState(0);
+    const [reverse, setReverse] = useState(false);
+    const [blink, setBlink] = useState(true);
+
+    // Blinking cursor
+    useEffect(() => {
+        const timeout2 = setTimeout(() => {
+            setBlink((prev) => !prev);
+        }, 500);
+        return () => clearTimeout(timeout2);
+    }, [blink]);
+
+    useEffect(() => {
+        if (subIndex === phrases[index].length + 1 && !reverse) {
+            const timeout = setTimeout(() => {
+                setReverse(true);
+            }, 2000); // Wait before deleting
+            return () => clearTimeout(timeout);
+        }
+
+        if (subIndex === 0 && reverse) {
+            setReverse(false);
+            setIndex((prev) => (prev + 1) % phrases.length);
+            return;
+        }
+
+        const timeout = setTimeout(() => {
+            setSubIndex((prev) => prev + (reverse ? -1 : 1));
+        }, reverse ? 30 : 50); // Typing speed vs deleting speed
+
+        return () => clearTimeout(timeout);
+    }, [subIndex, index, reverse, phrases]);
+
+    return (
+        <span className="font-mono text-cyan-400">
+            {phrases[index].substring(0, subIndex)}
+            <span className={`inline-block w-[2px] h-[1em] bg-cyan-400 ml-1 align-middle ${blink ? 'opacity-100' : 'opacity-0'}`}></span>
+        </span>
+    );
+};
+
 const AnimeSymbol = ({ icon: Icon, color, position, delay, label }) => (
     <motion.div
         initial={{ opacity: 0, scale: 0 }}
@@ -103,14 +146,20 @@ const Hero = () => {
                     </h1>
                 </div>
 
-                <motion.h2
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 3, duration: 1 }}
-                    className="text-sm md:text-xl font-inter text-cyan-400 tracking-[0.8em] uppercase mb-16 drop-shadow-[0_0_10px_rgba(0,255,255,0.5)]"
+                    className="text-sm md:text-lg font-inter text-cyan-400 tracking-widest uppercase mb-16 h-8"
                 >
-                    Emerging AI-Driven Engineer
-                </motion.h2>
+                    <TypewriterEffect phrases={[
+                        "Emerging AI-Driven Engineer",
+                        "Architecting Deep Neural Realities",
+                        "Forging RAG & LLM Pipelines",
+                        "Synthesizing GenAI Systems",
+                        "Mastering the Language of Machines"
+                    ]} />
+                </motion.div>
 
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
