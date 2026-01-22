@@ -69,44 +69,44 @@ const MangaPanel = ({ event, index }) => {
 const EventsBlog = () => {
     const events = [
         {
-            title: "GDG DevFest 2025",
-            date: "Dec 2025",
-            location: "Noida, India",
+            title: "TechSprint Hackathon",
+            date: "Oct 2025",
+            location: "GDG Galgotias",
+            character: "EREN",
+            color: "flame",
+            quote: "Move from 'I've heard of this' to 'I can build with this'.",
+            takeaways: ["Organized Hands-on Session", "Gemini API Demo", "Agentic AI Workflow"],
+            image: "/assets/images/event_techsprint.png" // Placeholder, user can update image
+        },
+        {
+            title: "InnoSpark Ideathon",
+            date: "Oct 10, 2025",
+            location: "Galgotias Univ",
             character: "GOJO",
             color: "l",
-            quote: "Throughout heaven and earth, technology alone is the honored one.",
-            takeaways: ["Google Cloud AI", "Web Assembly", "Networking"],
-            image: "/assets/images/event_gojo.png"
+            quote: "Representing Google Gemini was a responsibility that pushed me beyond fear.",
+            takeaways: ["Speaker for 100+ Students", "Live Nano Banana Demo", "Prompt Engineering"],
+            image: "/assets/images/event_innospark.png"
         },
         {
-            title: "HackFest 2025",
-            date: "Nov 2025",
-            location: "Virtual",
-            character: "EDWARD",
-            color: "thunder",
-            quote: "Equivalent Exchange: Code for Innovation.",
-            takeaways: ["Built AI Pipeline", "Collaborative Coding", "Won 2nd Place"],
-            image: "/assets/images/event_edward.png"
+            title: "GDG Internal Session",
+            date: "Dec 2025",
+            location: "Core Team",
+            character: "LEVI",
+            color: "wind",
+            quote: "Architecture level thinking and ownership.",
+            takeaways: ["Project Planning", "Execution Strategy", "Mentored Peers"],
+            image: "/assets/images/event_internal.png"
         },
         {
-            title: "Google Cloud Jam",
-            date: "Oct 2025",
+            title: "Google Cloud Study Jam",
+            date: "2024",
             location: "Campus",
             character: "SENKU",
-            color: "wind",
-            quote: "This is exciting! Get excited!",
-            takeaways: ["Completed 20 Badges", "Cloud Architecture", "Serverless"],
-            image: "/assets/images/event_senku.png"
-        },
-        {
-            title: "Open Source Contrib",
-            date: "Sep 2025",
-            location: "GitHub",
-            character: "LUFFY",
-            color: "kira",
-            quote: "I'm gonna be King of the Contributors!",
-            takeaways: ["merged 5 PRs", "Documentation", "Bug Fixes"],
-            image: "/assets/images/event_luffy.png"
+            color: "thunder",
+            quote: "10,000,000,000 points for Cloud Computing!",
+            takeaways: ["Mentored 120+ Students", "Generated Cloud Skills", "Community Building"],
+            image: "/assets/images/event_cloud.png"
         }
     ];
 

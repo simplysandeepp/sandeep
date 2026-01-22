@@ -64,57 +64,40 @@ const ExperienceDeathNote = () => {
         {
             company: "Infosys Springboard",
             role: "AI Intern",
-            duration: "Jul 2025 - Present",
+            duration: "Aug 2025 – Oct 2025",
             side: "right", // Light
             icon: <div className="text-xl">🍎</div>,
-            tasks: ["Building AI Models", "Optimizing Pipelines", "Neural Network Architecture"],
-            quote: "I'll take a potato chip... and BUILD IT!"
+            tasks: ["Deep Learning Model (CNN + U-Net)", "Real-time Spill Detection", "Achieved 82% Accuracy"],
+            quote: "I'll take a dataset... and TRAIN IT!"
         },
         {
-            company: "GirlScript Summer of Code",
-            role: "Contributor & Mentor",
-            duration: "Jul 2025 - Present",
+            company: "Google Student Ambassador",
+            role: "Technical Speaker & Organizer",
+            duration: "2024 – Present",
             side: "left", // L
-            icon: <Coffee size={20} />,
-            tasks: ["Open Source Mentorship", "Code Reviews", "Algorithm Optimization"],
-            quote: "I am... CONTRIBUTING"
+            icon: <div className="text-xl">🎙️</div>,
+            tasks: ["Organized Google IO Extended", "Speaker on Gemini & Veo 3", "Mentored 100+ Students"],
+            quote: "I am... REPRESENTING"
         },
         {
-            company: "Vault of Code",
-            role: "Web Dev Intern",
-            duration: "Aug 2025 - Present",
+            company: "GDG on Campus",
+            role: "Tech Lead",
+            duration: "2024 – Present",
             side: "right",
-            icon: <PenTool size={20} />,
-            tasks: ["Student LMS Portal", "React Integration", "Database Design"],
+            icon: <div className="text-xl">⚡</div>,
+            tasks: ["Led Google Cloud Study Jam", "Mentored 120+ Students", "Organized TechSprint'26"],
             quote: "Just as planned."
         },
         {
             company: "EduSkills (AICTE-Google)",
             role: "AI/ML Virtual Intern",
-            duration: "Jul 2025 - Present",
+            duration: "Jul 2025 - Sep 2025",
             side: "left",
             icon: <Link size={20} />,
             tasks: ["Cloud Computing", "TensorFlow", "Google Cloud Platform"],
             quote: "Access granted."
         },
-        {
-            company: "Prodigy Infotech",
-            role: "Software Dev Intern",
-            duration: "May 2025",
-            side: "right",
-            icon: <Eye size={20} />,
-            tasks: ["Full Stack Dev", "API Integration", "UI/UX Implementation"],
-            quote: "Delete... bugs... Delete!"
-        },
-        {
-            company: "CodSoft",
-            role: "AI Intern",
-            duration: "May 2025 - Jun 2025",
-            side: "left",
-            icon: <div className="text-xl">🔎</div>,
-            tasks: ["Machine Learning", "Data Analysis", "Python Scripting"],
-            quote: "Investigation complete."
-        }
+        // Kept as per request or optional, removing unused placeholders to keep it clean
     ];
 
     return (
