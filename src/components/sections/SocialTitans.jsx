@@ -119,7 +119,7 @@ const SocialTitans = () => {
                     className="text-center mb-12"
                 >
                     <h2 className="text-4xl md:text-5xl font-cinzel font-bold text-white mb-4 text-shadow-thunder">
-                        Humanity's Strongest
+                        Social Profile
                     </h2>
                     <div className="h-1 w-24 bg-titan-green mx-auto shadow-[0_0_10px_#00ff00]" />
                 </motion.div>

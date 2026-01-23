@@ -46,67 +46,67 @@ const SkillsHashira = () => {
 
     const skills = [
         {
-            title: "Data Structures & Algorithms",
-            breathing: "WATER BREATHING",
-            icon: Droplets,
-            color: "water",
-            quote: "Total Concentration."
+            title: "GenAI & LLMs",
+            breathing: "MOON BREATHING",
+            icon: Zap, // Using Zap for energy/AI power
+            color: "purple-500", // Moon/Purple theme
+            quote: "Moonbow - Half Moon."
         },
         {
-            title: "AI & ML",
-            breathing: "THUNDER BREATHING",
-            icon: Zap,
-            color: "thunder",
-            quote: "Thunderclap and Flash!"
-        },
-        {
-            title: "Deep Learning (GenAI, LLMs)",
+            title: "RAG Pipelines",
             breathing: "MIST BREATHING",
             icon: CloudFog,
             color: "mist",
             quote: "Obscuring Clouds."
         },
         {
-            title: "Full Stack",
-            breathing: "FLAME BREATHING",
-            icon: Flame,
-            color: "flame",
-            quote: "Set your heart ablaze!"
+            title: "Deep Learning",
+            breathing: "VOID BREATHING",
+            icon: Hexagon, // Abstract structure for Void
+            color: "gray-500",
+            quote: "Formless and infinite."
         },
         {
-            title: "SQL Database",
+            title: "Computer Vision",
+            breathing: "SOUND BREATHING",
+            icon: Wind, // Sound waves/Wind
+            color: "yellow-500", // Tengen Uzui theme
+            quote: "Roar!"
+        },
+        {
+            title: "TensorFlow / PyTorch",
             breathing: "STONE BREATHING",
             icon: Hexagon,
             color: "stone",
             quote: "Immovable Resolve."
         },
         {
-            title: "System Design",
+            title: "Python & SQL",
             breathing: "SERPENT BREATHING",
             icon: GitMerge,
             color: "serpent",
             quote: "Twisting Serpent."
         },
         {
-            title: "Cloud Computing",
+            title: "Data Science",
+            breathing: "WATER BREATHING",
+            icon: Droplets,
+            color: "water",
+            quote: "Total Concentration."
+        },
+        {
+            title: "React & Web Dev",
+            breathing: "FLAME BREATHING",
+            icon: Flame,
+            color: "flame",
+            quote: "Set your heart ablaze!"
+        },
+        {
+            title: "System Design",
             breathing: "WIND BREATHING",
             icon: Wind,
             color: "wind",
             quote: "Gale force winds!"
-        },
-        {
-            title: "Backend Dev",
-            breathing: "INSECT BREATHING",
-            icon: Bug,
-            color: "insect",
-            quote: "Dance of the butterfly."
-        },
-        {
-            title: "Open Source",
-            breathing: "LOVE BREATHING",
-            icon: Heart,
-            color: "love",
-            quote: "Passionate Coding!"
         }
     ];
 
@@ -131,9 +131,8 @@ const SkillsHashira = () => {
                 {/* Left Side: Text */}
                 <div className="text-left">
                     <h2 className="text-5xl md:text-7xl font-cinzel font-black text-white mb-6 leading-tight drop-shadow-lg">
-                        THE <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">NINE</span> <br />
-                        PILLARS
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">CURRENT</span> <br />
+                        SKILLS
                     </h2>
                     <p className="text-gray-400 text-lg max-w-md mb-8 border-l-4 border-red-600 pl-4">
                         Mastering the breathing techniques of modern software engineering to slay the demons of complexity.

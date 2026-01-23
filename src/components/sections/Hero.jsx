@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ParticleBackground from '../animations/ParticleBackground';
 import SectionContainer from '../ui/SectionContainer';
 import Button from '../ui/Button';
-import { ChevronDown, Flame, BookOpen, Sword } from 'lucide-react';
+import { ChevronDown, Flame, BookOpen, Sword, Brain } from 'lucide-react';
 
 const BreathingText = ({ text, delay = 0 }) => {
     const letters = text.split("");
@@ -125,6 +125,7 @@ const Hero = () => {
                 <AnimeSymbol icon={Flame} color="flame" position="top-20 left-20" delay={2.5} label="DEMON SLAYER" />
                 <AnimeSymbol icon={BookOpen} color="kira" position="bottom-20 right-20" delay={3.0} label="DEATH NOTE" />
                 <AnimeSymbol icon={Sword} color="titan-green" position="top-20 right-20" delay={3.5} label="AOT" />
+                <AnimeSymbol icon={Brain} color="cyan-400" position="bottom-20 left-20" delay={4.0} label="AI" />
             </div>
 
             <div className="z-10 text-center relative w-full max-w-6xl mx-auto">
