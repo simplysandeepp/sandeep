@@ -10,6 +10,7 @@ import Contact from './components/sections/Contact';
 import Footer from './components/sections/Footer';
 import FloatingNavbar from './components/ui/FloatingNavbar';
 import LoadingScreen from './components/ui/LoadingScreen';
+import Logo from './components/ui/Logo';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -44,6 +45,7 @@ function App() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
+            <Logo />
             <FloatingNavbar />
             <div id="hero"><Hero /></div>
             <div id="social"><SocialTitans /></div>
