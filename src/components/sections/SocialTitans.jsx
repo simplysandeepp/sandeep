@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Linkedin, Github, Twitter, Instagram, Mail, Globe, Ghost, Pin } from 'lucide-react'; // Added Ghost and Pin
+import { Linkedin, Github, Twitter, Instagram, Mail, Globe, Ghost, Pin, CodeXml } from 'lucide-react'; // Added Ghost and Pin
 import SectionContainer from '../ui/SectionContainer';
 
 const TitanCard = ({ name, type, icon: Icon, color, desc, delay, url }) => {
@@ -92,6 +92,14 @@ const SocialTitans = () => {
             color: "red-600",
             desc: "Visual Inspiration",
             url: "https://in.pinterest.com/simplysandeepp"
+        },
+        {
+            name: "LeetCode",
+            type: "Beast Titan", // Tactical/Throwing problems
+            icon: CodeXml,
+            color: "orange-500",
+            desc: "Problem Solving",
+            url: "https://leetcode.com/u/simplysandeepp"
         },
         {
             name: "Twitter / X",

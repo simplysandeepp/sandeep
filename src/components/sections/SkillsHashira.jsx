@@ -10,29 +10,30 @@ const HashiraCard = ({ item, index }) => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.1, type: "spring", stiffness: 50 }}
             viewport={{ once: true, margin: "-100px" }}
-            className={`relative group h-40 p-4 rounded-xl border border-white/5 hover:border-${item.color} bg-black/80 backdrop-blur-md transition-all duration-300 overflow-hidden hover:shadow-[0_0_20px_rgba(var(--${item.color}-rgb),0.3)] flex items-center gap-4`}
         >
-            {/* Elemental Glow on Hover */}
-            <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-${item.color}`} />
+            <a href={item.url} target="_blank" rel="noopener noreferrer" className={`relative group h-40 p-4 rounded-xl border border-white/5 hover:border-${item.color} bg-black/80 backdrop-blur-md transition-all duration-300 overflow-hidden hover:shadow-[0_0_20px_rgba(var(--${item.color}-rgb),0.3)] flex items-center gap-4 block w-full`}>
+                {/* Elemental Glow on Hover */}
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-${item.color}`} />
 
-            {/* Icon */}
-            <motion.div
-                whileHover={{ rotate: 360, scale: 1.1 }}
-                transition={{ duration: 0.8 }}
-                className={`p-3 rounded-full bg-${item.color}/10 flex-shrink-0`}
-            >
-                <item.icon size={32} className={`text-${item.color}`} />
-            </motion.div>
+                {/* Icon */}
+                <motion.div
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.8 }}
+                    className={`p-3 rounded-full bg-${item.color}/10 flex-shrink-0`}
+                >
+                    <item.icon size={32} className={`text-${item.color}`} />
+                </motion.div>
 
-            <div className="flex-1 relative z-10">
-                <h3 className="text-lg font-cinzel font-bold text-white mb-1 group-hover:text-${item.color} transition-colors">{item.title}</h3>
-                <p className={`text-[10px] font-jp text-${item.color}-light font-bold mb-1 tracking-widest uppercase`}>{item.breathing}</p>
+                <div className="flex-1 relative z-10">
+                    <h3 className="text-lg font-cinzel font-bold text-white mb-1 group-hover:text-${item.color} transition-colors">{item.title}</h3>
+                    <p className={`text-[10px] font-jp text-${item.color}-light font-bold mb-1 tracking-widest uppercase`}>{item.breathing}</p>
 
-                {/* Quote Reveal */}
-                <div className="h-0 overflow-hidden group-hover:h-auto transition-all duration-300">
-                    <p className="text-xs text-gray-400 italic">"{item.quote}"</p>
+                    {/* Quote Reveal */}
+                    <div className="h-0 overflow-hidden group-hover:h-auto transition-all duration-300">
+                        <p className="text-xs text-gray-400 italic">"{item.quote}"</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </motion.div>
     );
 };
@@ -46,67 +47,84 @@ const SkillsHashira = () => {
 
     const skills = [
         {
+            title: "Data Structures & Algos",
+            breathing: "WATER BREATHING",
+            icon: Droplets,
+            color: "blue-500", // Giyu Tomioka theme
+            quote: "Total Concentration.",
+            url: "https://www.geeksforgeeks.org/data-structures/"
+        },
+        {
             title: "GenAI & LLMs",
             breathing: "MOON BREATHING",
             icon: Zap, // Using Zap for energy/AI power
             color: "purple-500", // Moon/Purple theme
-            quote: "Moonbow - Half Moon."
+            quote: "Moonbow - Half Moon.",
+            url: "https://cloud.google.com/ai/generative-ai"
         },
         {
             title: "RAG Pipelines",
             breathing: "MIST BREATHING",
             icon: CloudFog,
             color: "mist",
-            quote: "Obscuring Clouds."
+            quote: "Obscuring Clouds.",
+            url: "https://python.langchain.com/docs/use_cases/question_answering/"
         },
         {
             title: "Deep Learning",
             breathing: "VOID BREATHING",
             icon: Hexagon, // Abstract structure for Void
             color: "gray-500",
-            quote: "Formless and infinite."
+            quote: "Formless and infinite.",
+            url: "https://www.deeplearning.ai/"
         },
         {
             title: "Computer Vision",
             breathing: "SOUND BREATHING",
             icon: Wind, // Sound waves/Wind
             color: "yellow-500", // Tengen Uzui theme
-            quote: "Roar!"
+            quote: "Roar!",
+            url: "https://opencv.org/"
         },
         {
             title: "TensorFlow / PyTorch",
             breathing: "STONE BREATHING",
             icon: Hexagon,
             color: "stone",
-            quote: "Immovable Resolve."
+            quote: "Immovable Resolve.",
+            url: "https://pytorch.org/"
         },
         {
             title: "Python & SQL",
             breathing: "SERPENT BREATHING",
             icon: GitMerge,
             color: "serpent",
-            quote: "Twisting Serpent."
+            quote: "Twisting Serpent.",
+            url: "https://docs.python.org/3/"
         },
         {
             title: "Data Science",
-            breathing: "WATER BREATHING",
+            breathing: "INSECT BREATHING",
             icon: Droplets,
-            color: "water",
-            quote: "Total Concentration."
+            color: "insect", // Shinobu theme
+            quote: "Dance of the Butterfly.",
+            url: "https://scikit-learn.org/stable/"
         },
         {
             title: "React & Web Dev",
             breathing: "FLAME BREATHING",
             icon: Flame,
             color: "flame",
-            quote: "Set your heart ablaze!"
+            quote: "Set your heart ablaze!",
+            url: "https://react.dev/"
         },
         {
             title: "System Design",
             breathing: "WIND BREATHING",
             icon: Wind,
             color: "wind",
-            quote: "Gale force winds!"
+            quote: "Gale force winds!",
+            url: "https://github.com/donnemartin/system-design-primer"
         }
     ];
 
