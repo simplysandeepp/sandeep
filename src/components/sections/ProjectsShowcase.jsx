@@ -50,12 +50,22 @@ const ProjectCard = ({ project, index }) => {
 
                     {/* Actions */}
                     <div className="flex gap-4">
-                        <button className={`flex-1 py-3 bg-${project.color} text-black font-bold uppercase tracking-wider hover:bg-white transition-colors flex items-center justify-center gap-2 rounded-sm clip-path-polygon shadow-md`}>
+                        <a
+                            href={project.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`flex-1 py-3 bg-${project.color} text-black font-bold uppercase tracking-wider hover:bg-white transition-colors flex items-center justify-center gap-2 rounded-sm clip-path-polygon shadow-md cursor-pointer`}
+                        >
                             View Project <ChevronRight size={18} />
-                        </button>
-                        <button className="px-5 py-3 border border-gray-500 text-white hover:border-white hover:text-white transition-colors rounded-sm bg-black/40 backdrop-blur">
+                        </a>
+                        <a
+                            href={project.repo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-5 py-3 border border-gray-500 text-white hover:border-white hover:text-white transition-colors rounded-sm bg-black/40 backdrop-blur cursor-pointer"
+                        >
                             <Code size={24} />
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -74,36 +84,44 @@ const ProjectCard = ({ project, index }) => {
 const ProjectsShowcase = () => {
     const projects = [
         {
+            title: "Tic Tac Toe Game",
+            character: "GOJO SATORU",
+            color: "kira",
+            quote: "Throughout heaven and earth, I am the honored one.",
+            stack: [Brain, Code, Layout],
+            image: "/assets/images/project_jjk.png",
+            url: "https://tik-tac-toe-rose.vercel.app",
+            repo: "https://github.com/simplysandeepp"
+        },
+        {
             title: "Personal Portfolio",
             character: "KIRITO",
             color: "l",
             quote: "This is my world. I decide the rules.",
             stack: [Layout, Code, Globe],
-            image: "/assets/images/project_kirito.png"
+            image: "/assets/images/project_kirito.png",
+            url: "https://sandeepp.in",
+            repo: "https://github.com/simplysandeepp/sandeep"
         },
         {
-            title: "AI Caption Gen",
+            title: "Image Captioning MISA",
             character: "SAITAMA",
-            color: "kira",
+            color: "mist", // AI/Brain Theme
             quote: "I'm just a hero for fun. Simple but OP.",
             stack: [Brain, Cpu, Code],
-            image: "/assets/images/project_saitama.png"
+            image: "/assets/images/project_saitama.png",
+            url: "https://github.com/simplysandeepp/image-captioner-misa/tree/main/task%203",
+            repo: "https://github.com/simplysandeepp/image-captioner-misa"
         },
         {
-            title: "MISA Assistant",
-            character: "KURISU",
-            color: "wind",
-            quote: "Time flows differently here... El Psy Kongroo.",
-            stack: [Brain, Database, Globe],
-            image: "/assets/images/project_kurisu.png"
-        },
-        {
-            title: "StudySphere",
+            title: "Study Sphere",
             character: "SUNG JIN WOO",
             color: "titan-green",
             quote: "I have to work harder than anyone else! Arise!",
             stack: [Layout, Database, Globe],
-            image: "/assets/images/project_solo.png"
+            image: "/assets/images/project_solo.png",
+            url: "https://studysphere11.vercel.app",
+            repo: "https://github.com/simplysandeepp"
         },
         {
             title: "Spotify Clone",
@@ -111,15 +129,9 @@ const ProjectsShowcase = () => {
             color: "titan-wall",
             quote: "I will keep moving forward... into the net.",
             stack: [Music, Code, Layout],
-            image: "/assets/images/project_cyberpunk.png"
-        },
-        {
-            title: "Tic Tac Toe AI",
-            character: "GOJO SATORU",
-            color: "kira",
-            quote: "Throughout heaven and earth, I am the honored one.",
-            stack: [Brain, Code, Layout],
-            image: "/assets/images/project_jjk.png"
+            image: "/assets/images/project_cyberpunk.png",
+            url: "https://github.com/simplysandeepp/spotify-clone",
+            repo: "https://github.com/simplysandeepp/spotify-clone"
         }
     ];
 

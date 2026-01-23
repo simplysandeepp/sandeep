@@ -76,7 +76,7 @@ const EventsBlog = () => {
             color: "flame",
             quote: "Move from 'I've heard of this' to 'I can build with this'.",
             takeaways: ["Organized Hands-on Session", "Gemini API Demo", "Agentic AI Workflow"],
-            image: "/assets/images/event_techsprint.png" // Placeholder, user can update image
+            image: "/assets/images/techsprint-hackathon.jpeg"
         },
         {
             title: "InnoSpark Ideathon",
@@ -86,7 +86,7 @@ const EventsBlog = () => {
             color: "l",
             quote: "Representing Google Gemini was a responsibility that pushed me beyond fear.",
             takeaways: ["Speaker for 100+ Students", "Live Nano Banana Demo", "Prompt Engineering"],
-            image: "/assets/images/event_innospark.png"
+            image: "/assets/images/ideathon.jpeg"
         },
         {
             title: "GDG Internal Session",
@@ -96,7 +96,7 @@ const EventsBlog = () => {
             color: "wind",
             quote: "Architecture level thinking and ownership.",
             takeaways: ["Project Planning", "Execution Strategy", "Mentored Peers"],
-            image: "/assets/images/event_internal.png"
+            image: "/assets/images/gdg internal.jpeg"
         },
         {
             title: "Google Cloud Study Jam",
@@ -106,7 +106,7 @@ const EventsBlog = () => {
             color: "thunder",
             quote: "10,000,000,000 points for Cloud Computing!",
             takeaways: ["Mentored 120+ Students", "Generated Cloud Skills", "Community Building"],
-            image: "/assets/images/event_cloud.png"
+            image: "/assets/images/cloud study jam.jpeg"
         }
     ];
 
