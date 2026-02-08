@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Github, Twitter, Instagram, Mail, Globe, Ghost, Pin, CodeXml } from 'lucide-react'; // Added Ghost and Pin
 import SectionContainer from '../ui/SectionContainer';
+import PinterestFollowButton from '../ui/PinterestFollowButton';
+import PinterestWidget from '../ui/PinterestWidget';
 
 const TitanCard = ({ name, type, icon: Icon, color, desc, delay, url }) => {
     return (
@@ -137,6 +139,23 @@ const SocialTitans = () => {
                         <TitanCard key={index} {...titan} delay={index * 0.1} />
                     ))}
                 </div>
+
+                {/* Pinterest Integration Section */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.8 }}
+                    viewport={{ once: true }}
+                    className="mt-16 space-y-8"
+                >
+                    {/* Pinterest Follow Button */}
+                    <div className="flex justify-center">
+                        <PinterestFollowButton username="simplysandeepp" />
+                    </div>
+
+                    {/* Pinterest Widget */}
+                    <PinterestWidget username="simplysandeepp" />
+                </motion.div>
             </div>
         </SectionContainer>
     );
