@@ -11,6 +11,7 @@ import Footer from './components/sections/Footer';
 import FloatingNavbar from './components/ui/FloatingNavbar';
 import LoadingScreen from './components/ui/LoadingScreen';
 import Logo from './components/ui/Logo';
+import PinterestSection from './components/sections/PinterestSection';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -53,6 +54,7 @@ function App() {
             <div id="projects"><ProjectsShowcase /></div>
             <div id="events"><EventsBlog /></div>
             <div id="experience"><ExperienceDeathNote /></div>
+            <div id="pinterest"><PinterestSection /></div>
             <div id="contact"><Contact /></div>
             <Footer />
           </motion.div>

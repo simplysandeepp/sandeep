@@ -25,17 +25,18 @@ const PinterestWidget = ({ username = 'simplysandeepp', boardName = '', classNam
             viewport={{ once: true }}
             className={`w-full ${className}`}
         >
-            <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl p-6">
-                <h3 className="text-2xl font-cinzel font-bold text-white mb-4 text-center">
+            <div className="bg-black/40 backdrop-blur-md border border-red-600/30 rounded-xl p-6 md:p-8 shadow-lg shadow-red-600/10">
+                <h3 className="text-2xl md:text-3xl font-cinzel font-bold text-white mb-6 text-center">
                     Latest from Pinterest
                 </h3>
-                <div className="flex justify-center">
+                <div className="flex justify-center w-full">
                     <a
                         data-pin-do="embedUser"
-                        data-pin-board-width="400"
-                        data-pin-scale-height="240"
-                        data-pin-scale-width="80"
+                        data-pin-board-width="900"
+                        data-pin-scale-height="400"
+                        data-pin-scale-width="115"
                         href={widgetUrl}
+                        className="w-full"
                     ></a>
                 </div>
             </div>
