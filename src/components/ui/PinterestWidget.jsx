@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 /**
@@ -6,10 +6,19 @@ import { motion } from 'framer-motion';
  * Displays your latest Pinterest pins
  */
 const PinterestWidget = ({ username = 'simplysandeepp', boardName = '', className = '' }) => {
+    const widgetRef = useRef(null);
+    const hasInitialized = useRef(false);
+
     useEffect(() => {
-        // Reload Pinterest widgets when component mounts
-        if (window.PinUtils) {
-            window.PinUtils.build();
+        // Only initialize once to prevent duplication
+        if (!hasInitialized.current && window.PinUtils && widgetRef.current) {
+            hasInitialized.current = true;
+            // Small delay to ensure DOM is ready
+            setTimeout(() => {
+                if (window.PinUtils) {
+                    window.PinUtils.build();
+                }
+            }, 100);
         }
     }, []);
 
@@ -24,6 +33,7 @@ const PinterestWidget = ({ username = 'simplysandeepp', boardName = '', classNam
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className={`w-full ${className}`}
+            ref={widgetRef}
         >
             <div className="bg-black/40 backdrop-blur-md border border-red-600/30 rounded-xl p-6 md:p-8 shadow-lg shadow-red-600/10">
                 <h3 className="text-2xl md:text-3xl font-cinzel font-bold text-white mb-6 text-center">
