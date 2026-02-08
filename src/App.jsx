@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     // Simulate initial loading for resources
-    const timer = setTimeout(() => setLoading(false), 4500);
+    const timer = setTimeout(() => setLoading(false), 1500);
 
     // Prank: Replace copied text
     const handleCopy = (e) => {

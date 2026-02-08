@@ -18,7 +18,7 @@ const LoadingScreen = ({ onComplete }) => {
         // Message cycler
         const messageInterval = setInterval(() => {
             setMessageIndex(prev => (prev < techMessages.length - 1 ? prev + 1 : prev));
-        }, 800);
+        }, 300);
 
         // Progress bar simulation
         const progressInterval = setInterval(() => {
@@ -27,9 +27,9 @@ const LoadingScreen = ({ onComplete }) => {
                     clearInterval(progressInterval);
                     return 100;
                 }
-                return prev + Math.random() * 5;
+                return prev + Math.random() * 15;
             });
-        }, 150);
+        }, 50);
 
         return () => {
             clearInterval(messageInterval);
