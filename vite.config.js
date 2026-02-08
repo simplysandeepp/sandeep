@@ -5,13 +5,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    // Enable minification for smaller bundle sizes
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true, // Remove console.logs in production
-      },
-    },
+    // Enable minification for smaller bundle sizes (using esbuild, Vite's default)
+    minify: 'esbuild',
     // Code splitting configuration
     rollupOptions: {
       output: {
