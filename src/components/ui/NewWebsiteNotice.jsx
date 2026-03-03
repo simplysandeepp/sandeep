@@ -1,80 +1,90 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { X } from 'lucide-react';
 
 function NewWebsiteNotice() {
-  const [isVisible, setIsVisible] = useState(true);
-
-  const handleClose = () => {
-    setIsVisible(false);
-  };
-
   const handleVisitNewSite = () => {
     window.location.href = 'https://www.sandeepp.in/';
   };
 
-  if (!isVisible) return null;
-
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 backdrop-blur-sm">
+    <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 backdrop-blur-lg">
+      {/* Premium Glow Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-40 h-40 bg-red-600 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-red-900 rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-pulse" style={{animationDelay: '1s'}}></div>
+      </div>
+
       <motion.div
-        initial={{ scale: 0.5, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl max-w-md w-full mx-4 border border-red-500 border-opacity-30"
+        initial={{ scale: 0.5, opacity: 0, y: 30 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
+        onClick={handleVisitNewSite}
+        className="relative max-w-sm w-full mx-4 rounded-3xl overflow-hidden shadow-2xl cursor-pointer"
+        style={{
+          background: 'linear-gradient(135deg, rgba(20, 20, 25, 0.95) 0%, rgba(30, 15, 20, 0.98) 100%)',
+          backdropFilter: 'blur(20px)',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+          boxShadow: '0 8px 32px rgba(220, 38, 38, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1)',
+        }}
       >
+        {/* Premium Shine Effect */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-red-400 to-transparent opacity-60"></div>
+
         {/* Header */}
-        <div className="relative bg-gradient-to-r from-red-600 to-red-500 px-6 py-4 rounded-t-2xl">
-          <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-white">📢 Important Notice</h2>
-            <button
-              onClick={handleClose}
-              className="text-white hover:bg-red-700 p-1 rounded-full transition"
-            >
-              <X size={20} />
-            </button>
+        <div className="relative px-5 py-4 bg-gradient-to-r from-red-700 via-red-600 to-red-500 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-white opacity-10 via-transparent to-transparent"></div>
+          <div className="relative">
+            <h2 className="text-2xl font-black text-white drop-shadow-lg">
+              ✨ Notice
+            </h2>
           </div>
         </div>
 
         {/* Content */}
-        <div className="px-6 py-8 text-center space-y-6">
+        <div className="px-6 py-7 text-center space-y-5">
           <div>
-            <p className="text-lg text-gray-300 mb-2">
-              Dear Visitor,
+            <p className="text-sm text-red-300 font-semibold mb-3 uppercase tracking-widest">
+              🚀 Portfolio Update
             </p>
-            <p className="text-gray-400 leading-relaxed">
-              I am pleased to inform you that a new and improved portfolio website has been created 
-              by the developer with a custom domain. This site now features enhanced user experience, 
-              improved performance, and a modern design tailored to showcase projects and expertise more effectively.
+            <p className="text-white text-base leading-relaxed font-light">
+              Developer portfolio is now shifted to new domain !!
             </p>
           </div>
 
-          <div className="bg-gray-700 bg-opacity-50 px-4 py-3 rounded-lg border border-gray-600">
-            <p className="text-sm text-gray-300">
-              <span className="font-semibold text-red-400">New Website:</span> sandeepp.in
-            </p>
-          </div>
-
-          <p className="text-sm text-gray-500">
-            We recommend visiting the new website for the latest content and features.
-          </p>
+          {/* Domain Box - Premium Glossy Style */}
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="relative px-5 py-4 rounded-2xl overflow-hidden"
+            style={{
+              background: 'linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(190, 24, 24, 0.15) 100%)',
+              border: '1.5px solid rgba(220, 38, 38, 0.6)',
+              backdropFilter: 'blur(10px)',
+              boxShadow: 'inset 0 1px 2px rgba(255, 255, 255, 0.1), 0 4px 15px rgba(220, 38, 38, 0.15)',
+            }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-white opacity-5 via-transparent to-transparent"></div>
+            <p className="relative text-lg font-bold text-white tracking-wider">sandeepp.in</p>
+          </motion.div>
         </div>
 
         {/* Buttons */}
-        <div className="flex gap-3 px-6 pb-6">
-          <button
-            onClick={handleClose}
-            className="flex-1 px-4 py-3 bg-gray-700 hover:bg-gray-600 text-white rounded-lg font-semibold transition duration-200"
-          >
-            Dismiss
-          </button>
-          <button
+        <div className="flex gap-3 px-6 pb-7">
+          <motion.button
+            whileHover={{ scale: 1.02 }}
             onClick={handleVisitNewSite}
-            className="flex-1 px-4 py-3 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white rounded-lg font-semibold transition duration-200 shadow-lg"
+            className="w-full px-4 py-3 rounded-lg font-bold text-white transition duration-300 text-base"
+            style={{
+              background: 'linear-gradient(135deg, #dc2626 0%, #b91c1c 100%)',
+              boxShadow: '0 8px 20px rgba(220, 38, 38, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.2)',
+              textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
+            }}
           >
-            Visit New Website →
-          </button>
+            Visit New Website ✨
+          </motion.button>
         </div>
+
+        {/* Bottom Shine */}
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-400 to-transparent opacity-40"></div>
       </motion.div>
     </div>
   );

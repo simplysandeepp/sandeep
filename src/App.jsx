@@ -8,9 +8,7 @@ import EventsBlog from './components/sections/EventsBlog';
 import ProjectsShowcase from './components/sections/ProjectsShowcase';
 import Contact from './components/sections/Contact';
 import Footer from './components/sections/Footer';
-import FloatingNavbar from './components/ui/FloatingNavbar';
 import LoadingScreen from './components/ui/LoadingScreen';
-import Logo from './components/ui/Logo';
 import PinterestSection from './components/sections/PinterestSection';
 import NewWebsiteNotice from './components/ui/NewWebsiteNotice';
 
@@ -48,8 +46,6 @@ function App() {
             transition={{ duration: 0.5 }}
           >
             <NewWebsiteNotice />
-            <Logo />
-            <FloatingNavbar />
             <div id="hero"><Hero /></div>
             <div id="social"><SocialTitans /></div>
             <div id="skills"><SkillsHashira /></div>
