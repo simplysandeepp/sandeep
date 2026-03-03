@@ -32,7 +32,7 @@ function App() {
               {/* Premium Logo/Text */}
               <div className="text-center mb-12">
                 <h1 className="text-6xl md:text-7xl font-black text-white drop-shadow-lg mb-4">
-                  SANDEEP
+                  SANDEEP PRAJAPATI
                 </h1>
                 <div className="h-1 w-32 mx-auto bg-gradient-to-r from-red-600 to-red-500 rounded-full mb-6"></div>
                 <p className="text-lg text-gray-300 tracking-widest uppercase">
@@ -43,15 +43,15 @@ function App() {
               {/* Premium Stats */}
               <div className="grid grid-cols-3 gap-4 mb-12 max-w-md mx-auto">
                 <div className="bg-black bg-opacity-40 p-4 rounded-lg border border-red-500 border-opacity-30">
-                  <p className="text-2xl font-bold text-red-400">50+</p>
+                  <p className="text-2xl font-bold text-red-400">20+</p>
                   <p className="text-xs text-gray-400 uppercase tracking-wide">Projects</p>
                 </div>
                 <div className="bg-black bg-opacity-40 p-4 rounded-lg border border-red-500 border-opacity-30">
-                  <p className="text-2xl font-bold text-red-400">5+</p>
+                  <p className="text-2xl font-bold text-red-400">3+</p>
                   <p className="text-xs text-gray-400 uppercase tracking-wide">Years</p>
                 </div>
                 <div className="bg-black bg-opacity-40 p-4 rounded-lg border border-red-500 border-opacity-30">
-                  <p className="text-2xl font-bold text-red-400">100%</p>
+                  <p className="text-2xl font-bold text-red-400">98%</p>
                   <p className="text-xs text-gray-400 uppercase tracking-wide">Dedicated</p>
                 </div>
               </div>
