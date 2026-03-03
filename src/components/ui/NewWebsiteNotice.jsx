@@ -18,18 +18,12 @@ function NewWebsiteNotice() {
       <div className="mt-8">
         <a
           href="https://www.sandeepp.in/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block px-8 py-4 bg-gradient-to-r from-red-600 to-red-500 text-white font-bold text-lg rounded-lg hover:from-red-700 hover:to-red-600 transition duration-300 shadow-lg cursor-pointer"
-          onClick={(e) => {
-            e.preventDefault();
-            window.location.href = 'https://www.sandeepp.in/';
-          }}
+          className="inline-block px-8 py-4 bg-gradient-to-r from-red-600 to-red-500 text-white font-bold text-lg rounded-lg hover:from-red-700 hover:to-red-600 hover:shadow-2xl transition-all duration-300 shadow-lg cursor-pointer transform hover:scale-105"
         >
           Visit https://www.sandeepp.in/ →
         </a>
         <p className="mt-4 text-gray-500 text-sm">
-          or copy this link: <a href="https://www.sandeepp.in/" target="_blank" rel="noopener noreferrer" className="text-red-400 font-mono hover:text-red-300 transition cursor-pointer">www.sandeepp.in</a>
+          or copy this link: <a href="https://www.sandeepp.in/" className="text-red-400 font-mono hover:text-red-300 transition cursor-pointer underline">www.sandeepp.in</a>
         </p>
       </div>
     </div>
