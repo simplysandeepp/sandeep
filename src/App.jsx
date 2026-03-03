@@ -1,39 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import LoadingScreen from './components/ui/LoadingScreen';
+import React from 'react';
+import { motion } from 'framer-motion';
 import NewWebsiteNotice from './components/ui/NewWebsiteNotice';
 
-// import Hero from './components/sections/Hero';
-// import SocialTitans from './components/sections/SocialTitans';
-// import SkillsHashira from './components/sections/SkillsHashira';
-// import ExperienceDeathNote from './components/sections/ExperienceDeathNote';
-// import EventsBlog from './components/sections/EventsBlog';
-// import ProjectsShowcase from './components/sections/ProjectsShowcase';
-// import Contact from './components/sections/Contact';
-// import Footer from './components/sections/Footer';
-// import PinterestSection from './components/sections/PinterestSection';
-
 function App() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate initial loading for resources
-    const timer = setTimeout(() => setLoading(false), 1000);
-
-    // Prank: Replace copied text
-    const handleCopy = (e) => {
-      e.preventDefault();
-      e.clipboardData.setData('text/plain', "Lol, What did you get by copying? 😂😂");
-    };
-
-    document.addEventListener('copy', handleCopy);
-
-    return () => {
-      clearTimeout(timer);
-      document.removeEventListener('copy', handleCopy);
-    };
-  }, []);
-
   return (
     <main className="bg-black min-h-screen text-white overflow-x-hidden selection:bg-red-500 selection:text-white relative">
       {/* Premium Background */}
@@ -52,7 +21,6 @@ function App() {
 
       {/* Main Content */}
       <div className="relative z-10">
-        {/* Premium Content Container - All in One Frame */}
         <div className="flex items-center justify-center min-h-screen py-12">
           <div className="max-w-2xl w-full mx-4">
             <motion.div
@@ -92,18 +60,11 @@ function App() {
               <div className="h-px bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-30 my-8"></div>
 
               {/* Important Notice */}
-              {!loading && <NewWebsiteNotice />}
+              <NewWebsiteNotice />
             </motion.div>
           </div>
         </div>
       </div>
-
-      {/* Loading Screen Overlay */}
-      <AnimatePresence mode="wait">
-        {loading && (
-          <LoadingScreen key="loader" />
-        )}
-      </AnimatePresence>
     </main>
   );
 }
