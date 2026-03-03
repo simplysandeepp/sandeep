@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Home, Zap, Code, Sword, BookOpen, Mail } from 'lucide-react';
+import { Home, Zap, Code, Sword, BookOpen, Mail, Sparkles } from 'lucide-react';
 
 const navItems = [
     { id: 'hero', icon: Home, label: 'Home' },
@@ -9,6 +9,7 @@ const navItems = [
     { id: 'experience', icon: Sword, label: 'Exp' },
     { id: 'events', icon: BookOpen, label: 'Events' },
     { id: 'contact', icon: Mail, label: 'Contact' },
+    { id: 'new-portfolio', icon: Sparkles, label: 'New Portfolio', href: '/new-portfolio/' },
 ];
 
 const FloatingNavbar = () => {
@@ -54,7 +55,7 @@ const FloatingNavbar = () => {
                 {navItems.map((item) => (
                     <button
                         key={item.id}
-                        onClick={() => scrollTo(item.id)}
+                        onClick={() => item.href ? window.location.href = item.href : scrollTo(item.id)}
                         className={`relative p-2 rounded-full transition-all duration-300 group ${activeSection === item.id ? 'text-white' : 'text-gray-400 hover:text-white'}`}
                     >
                         {activeSection === item.id && (

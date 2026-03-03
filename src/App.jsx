@@ -12,6 +12,7 @@ import FloatingNavbar from './components/ui/FloatingNavbar';
 import LoadingScreen from './components/ui/LoadingScreen';
 import Logo from './components/ui/Logo';
 import PinterestSection from './components/sections/PinterestSection';
+import NewWebsiteNotice from './components/ui/NewWebsiteNotice';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -46,6 +47,7 @@ function App() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
+            <NewWebsiteNotice />
             <Logo />
             <FloatingNavbar />
             <div id="hero"><Hero /></div>
