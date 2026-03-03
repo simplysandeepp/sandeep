@@ -32,7 +32,7 @@ function App() {
               {/* Premium Logo/Text */}
               <div className="text-center mb-12">
                 <h1 className="text-6xl md:text-7xl font-black text-white drop-shadow-lg mb-4">
-                  SANDEEP PRAJAPATI
+                  SANDEEP
                 </h1>
                 <div className="h-1 w-32 mx-auto bg-gradient-to-r from-red-600 to-red-500 rounded-full mb-6"></div>
                 <p className="text-lg text-gray-300 tracking-widest uppercase">
